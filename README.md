@@ -5,9 +5,9 @@
 The website for LoneStar Gaming's streams, which allows for store redemptions,
 soundboard usage, and more (in the future)!
 
-This website is made in Python and uses FastAPI under the hood. If you want to
-fork this repository and make something similar, feel free to! This project is
-licensed under the MIT open-source license, so go crazy.
+This website is made in Python and uses a Flask webserver under the hood. If you
+want to fork this repository and make something similar, feel free to! This project
+is licensed under the MIT open-source license, so go crazy.
 
 ## Getting Started:
 
@@ -18,8 +18,8 @@ Prerequisites:
 
 ### 1: Install requirements
 #### 1.1: Install requirements using system-wide Python install
-This can be done via the PIP command, if you're using pip. If you're not, then you
-probably skipped this part anyway.<br />
+This can be done via the pip command, if you're using the Pip package manager. If you're
+not, then you  probably skipped this part anyway.<br />
 Make sure you're in the directory of the cloned Git repository, then run either of
 the following commands, using whichever works.
 
@@ -49,12 +49,13 @@ Finally, run the command to install the requirements.
 
 `pip install -r requirements.txt`
 
-### 2: Run the server
-Run the following command to start the FastAPI server in development mode.
-**Do not use this for your full website!** Only use this command if you want
-to test out changes to your website.
+### 2: Start the development server
+To start the server, simply run the `run.py` Python script.
 
-`fastapi dev main.py --reload`
+`python run.py`
+
+The default port is 8080, which *shouldn't* conflict with any other ports. But if you
+get an error when trying to start the server, change the port to something else.
 
 ### 3: Run in production
 TODO: Write this part.

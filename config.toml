@@ -4,6 +4,9 @@
 app_name="S.W.I.F.T.Y"
 version="0.1-alpha"
 
+## Runtime config options
+port=8080
+
 ## Channel linking options
 channel_name="LoneStar Gaming"  ## This will be your general channel name, across YouTube and Twitch.
 ### Channels
