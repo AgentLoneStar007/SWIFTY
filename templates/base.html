@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{app_name}}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <!-- TODO: Add navbar and other junk here! -->
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!--
+        TODO: Add stuff here too!
+        <p>&copy; {{ year }}</p>
+        -->
+        <p>
+            {{channel_name}} - Built with <a
+                href="https://github.com/AgentLoneStar007/SWIFTY"
+                target="_blank"
+                >S.W.I.F.T.Y</a>
+        </p>
+    </footer>
+</body>
+</html>

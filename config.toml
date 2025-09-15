@@ -1,0 +1,17 @@
+# S.W.I.F.T.Y base config
+
+## General config options
+app_name="S.W.I.F.T.Y"
+version="0.1-alpha"
+
+## Channel linking options
+channel_name="LoneStar Gaming"  ## This will be your general channel name, across YouTube and Twitch.
+### Channels
+youtube_channel_url="https://youtube.com/@agentlonestar007"
+twitch_channel_url="https://twitch.tv/lonestar_gamingofficial"
+### Socials
+instagram_url=""
+twitter_url="" ## Or X, whatever.
+tiktok_url=""
+reddit_url=""
+facebook_url=""  ## You a boomer if you set this.
