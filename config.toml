@@ -3,6 +3,19 @@
 ## General config options
 app_name="S.W.I.F.T.Y"
 version="0.1-alpha"
+### Change to false if you're running this in a production environment!
+run_in_debug_mode=true
+
+## Customization options
+### Authentication options for viewers
+### Set these based off of what platforms you stream too
+enable_twitch=true
+enable_youtube=true
+### Features
+enable_store=true
+enable_soundboard=true
+enable_about_me_page=true
+enable_tips_page=true
 
 ## Runtime config options
 port=8080
@@ -10,6 +23,7 @@ port=8080
 ## Channel linking options
 channel_name="LoneStar Gaming"  ## This will be your general channel name, across YouTube and Twitch.
 ### Channels
+# These will be ignored even if they are set if their respective platform is disabled above!
 youtube_channel_url="https://youtube.com/@agentlonestar007"
 twitch_channel_url="https://twitch.tv/lonestar_gamingofficial"
 ### Socials

@@ -20,7 +20,10 @@ def main() -> None:
     app: Flask = create_app(config.get("app_name", "S.W.I.F.T.Y"))
 
     # And start the server
-    app.run(port=int(config.get("port", 8080)))
+    app.run(
+        port=int(config.get("port", 8080)),
+        debug=bool(config.get("run_in_debug_mode", True))
+    )
 
 
 if __name__ == "__main__":

@@ -1,31 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{{app_name}}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <!-- TODO: Add navbar and other junk here! -->
-    </header>
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-secondary">
+              <div class="container-fluid">
+                  <!-- Right side of navbar - pages -->
+                  <a class="navbar-brand" href="#">Home</a>
+                  <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Soundboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Links</a>
+                        </li>
+                  </ul>
 
-    <footer>
-        <!--
-        TODO: Add stuff here too!
-        <p>&copy; {{ year }}</p>
-        -->
-        <p>
-            {{channel_name}} - Built with <a
-                href="https://github.com/AgentLoneStar007/SWIFTY"
-                target="_blank"
-                >S.W.I.F.T.Y</a>
-        </p>
-    </footer>
+                      <!-- Right side of navbar - user profile, etc -->
+                   <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Login</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <ul class="navbar-nav">
+                    <li>
+                        <button class="btn btn-primary" id="theme-toggle">
+                            <span id="theme-icon" class="lucide" data-lucide="moon"></span>
+                        </button>
+                    </li>
+                </ul>
+              </div>
+            </nav>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            <p>
+                {{channel_name}} - Built with <a
+                    href="https://github.com/AgentLoneStar007/SWIFTY"
+                    target="_blank"
+                    >S.W.I.F.T.Y</a>
+            </p>
+        </footer>
+    </div>
+    <!-- Load Lucide icons' Javascript -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Load Bootstrap's Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Theme handler script. Handles the theme toggle button, device-preference theming, and theme persistence. -->
+    <script src="{{ url_for('static', filename='js/theme-handler.js') }}"></script>
+    <!-- Set the icons in the page -->
+    <script>
+      lucide.createIcons();
+    </script>
 </body>
 </html>

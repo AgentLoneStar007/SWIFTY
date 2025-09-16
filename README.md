@@ -5,13 +5,13 @@
 The website for LoneStar Gaming's streams, which allows for store redemptions,
 soundboard usage, and more (in the future)!
 
-This website is made in Python and uses a Flask webserver under the hood. If you
-want to fork this repository and make something similar, feel free to! This project
-is licensed under the MIT open-source license, so go crazy.
+This website is made in Python and uses a Flask webserver under the hood, as well as
+Bootstrap for components and styling. If you want to fork this repository and make
+something similar, feel free to! This project is licensed under the MIT open-source
+license, so go crazy.
 
 ## Getting Started:
 
---- 
 Prerequisites:
 - Python
 - A brain
@@ -39,7 +39,7 @@ so by running the following commands:
 Which would install the virtual environment in a directory named ".venv/"
 Then activate the virtual environment using the command for your operating system.
 
-Linux:<br />
+Linux/UNIX-based OS:<br />
 `source .venv/bin/activate`
 
 Windows:<br />
