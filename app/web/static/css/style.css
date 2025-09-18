@@ -1,18 +1,18 @@
 /* Customizations for the light theme (default) */
 :root, [data-bs-theme="light"] {
-    --bs-primary: #007bff; /* Example: A custom primary blue */
+    /* This will be the primary color of the site. Think the navbar's color.
+    (Not the text on it, though.) */
+    --bs-primary: #007bff;
+    /* This is the background color of the whole page. */
     --bs-body-bg: #f8f9fa; /* Lighter background */
+    /* This is the color of most of the text on the site.
+    Does not include links, A.K.A the <a> tag. */
     --bs-body-color: #212529; /* Darker text */
 }
 
 /* Customizations for the dark theme */
 [data-bs-theme="dark"] {
-    /* This will be the primary color of the site. Think the navbar's color.
-    (Not the text on it, though.) */
     --bs-primary: #6c757d;
-    /* This is the background color of the whole page. */
     --bs-body-bg: #050B30;
-    /* This is the color of most of the text on the site.
-    Does not include links, A.K.A the <a> tag. */
     --bs-body-color: #f8f9fa;
 }

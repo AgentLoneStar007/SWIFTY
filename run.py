@@ -4,7 +4,7 @@
 ## Created by AgentLoneStar007, licensed under the MIT license.
 
 # Imports
-from app import create_app
+from app import createApp
 from flask import Flask
 import tomllib
 import sys
@@ -17,7 +17,7 @@ def main() -> None:
     config: dict = tomllib.load(open("config.toml", "rb"))
 
     # Create the app
-    app: Flask = create_app(config.get("app_name", "S.W.I.F.T.Y"))
+    app: Flask = createApp(config.get("app_name", "S.W.I.F.T.Y"))
 
     # And start the server
     app.run(

@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{{icon_url}}">
     <title>{% block title %}{{app_name}}{% endblock %}</title>
+    <!-- Load Bootstrap's CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Load Lucide icons' Javascript -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Load custom styling -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <nav class="navbar navbar-expand-lg bg-secondary">
+            <nav class="navbar navbar-expand-lg bg-secondary rounded-bottom">
               <div class="container-fluid">
-                  <!-- Right side of navbar - pages -->
-                  <a class="navbar-brand" href="#">Home</a>
-                  <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Store</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Soundboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Tips</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Links</a>
-                        </li>
+                <!-- Channel Name -->
+                <a class="navbar-brand" href="/">Home</a>
+
+                <!-- Hamburger toggle button for mobile -->
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent"
+                        aria-controls="navbarContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible menu -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                  <!-- Left side: Pages -->
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      {% if enable_store %}
+                        <li class="nav-item"><a class="nav-link" href="/store">Store</a></li>
+                      {% endif %}
+                      {% if enable_soundboard %}
+                        <li class="nav-item"><a class="nav-link" href="/soundboard">Soundboard</a></li>
+                      {% endif %}
+                      {% if enable_tips_page %}
+                        <li class="nav-item"><a class="nav-link" href="/tips">Tips</a></li>
+                      {% endif %}
+                      {% if enable_about_me_page %}
+                        <li class="nav-item"><a class="nav-link" href="/about-me">About Me</a></li>
+                      {% endif %}
+                      {% if enable_links_page %}
+                        <li class="nav-item"><a class="nav-link" href="/links">Links</a></li>
+                      {% endif %}
                   </ul>
 
-                      <!-- Right side of navbar - user profile, etc -->
-                   <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Login</a>
+                  <!-- Right side: User + Theme -->
+                  <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/auth/login">Login</a></li>
+                    <li class="nav-item ms-2">
+                      <button class="btn btn-primary" id="theme-toggle">
+                        <i id="theme-icon" data-lucide="moon"></i>
+                      </button>
                     </li>
                   </ul>
                 </div>
-
-                <ul class="navbar-nav">
-                    <li>
-                        <button class="btn btn-primary" id="theme-toggle">
-                            <span id="theme-icon" class="lucide" data-lucide="moon"></span>
-                        </button>
-                    </li>
-                </ul>
               </div>
             </nav>
         </header>
@@ -56,17 +69,15 @@
             {% endblock %}
         </main>
 
-        <footer>
+        <footer class="fixed-bottom text-center">
             <p>
-                {{channel_name}} - Built with <a
+                {{channel_name}} - Built with <i><a
                     href="https://github.com/AgentLoneStar007/SWIFTY"
                     target="_blank"
-                    >S.W.I.F.T.Y</a>
+                    >S.W.I.F.T.Y</a></i>
             </p>
         </footer>
     </div>
-    <!-- Load Lucide icons' Javascript -->
-    <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Load Bootstrap's Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- Theme handler script. Handles the theme toggle button, device-preference theming, and theme persistence. -->

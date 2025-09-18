@@ -1,6 +1,6 @@
 // Written entirely by Gemini because I hate Javascript.
 // P.S. How do people vibe code? I've run this code through three AIs and
-// still can't fix an issue
+// still can't fix an issue.
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
@@ -21,8 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update the icon's data attribute based on the new theme
         if (theme === 'dark') {
             themeIcon.setAttribute('data-lucide', 'sun');
+            //themeIcon.innerHTML = '<i id="theme-icon" data-lucide="sun"></i>';
         } else {
             themeIcon.setAttribute('data-lucide', 'moon');
+            //themeIcon.innerHTML = '<i id="theme-icon" data-lucide="moon"></i>';
         }
 
         // Re-create icons

@@ -1,5 +1,6 @@
-# S.W.I.F.T.Y
-### *Stream Web-based Interaction Frontend for Twitch and YouTube*
+<img src="logo.png" alt="The SWIFTY logo." />
+
+#### *Stream Web-based Interaction Frontend for Twitch and YouTube*
 
 ---
 The website for LoneStar Gaming's streams, which allows for store redemptions,
@@ -59,3 +60,7 @@ get an error when trying to start the server, change the port to something else.
 
 ### 3: Run in production
 TODO: Write this part.
+
+Disclaimer: the logo is AI generated because I have more important things to do than
+make a cool logo. If you're a logo artist or something and have something better, hit
+me up. I hate AIGC as much as the next guy.

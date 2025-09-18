@@ -14,21 +14,28 @@ enable_youtube=true
 ### Features
 enable_store=true
 enable_soundboard=true
-enable_about_me_page=true
 enable_tips_page=true
+enable_about_me_page=true
+enable_links_page=true
 
 ## Runtime config options
 port=8080
 
-## Channel linking options
+## Channel customization and linking options
 channel_name="LoneStar Gaming"  ## This will be your general channel name, across YouTube and Twitch.
+### You can either set this to be a full URL to an icon image or the path to your icon in the static folder.
+### By path, I mean you HAVE to put the icon somewhere in the static/ directory, and put the RELATIVE
+### link here! For example, if you put your icon in /static/images/favicon.ico, the relative path would
+### be "/images/favicon.ico". A path like C:\Users\somedude\Desktop\favicon.ico WILL NOT WORK!!
+### Oh, and it needs to be a .ico file type.
+channel_icon_url="/images/favicon.ico"
 ### Channels
 # These will be ignored even if they are set if their respective platform is disabled above!
-youtube_channel_url="https://youtube.com/@agentlonestar007"
+youtube_channel_url="https://youtube.com/@agentlonestar007"  ## Go subscribe right now :)
 twitch_channel_url="https://twitch.tv/lonestar_gamingofficial"
 ### Socials
 instagram_url=""
-twitter_url="" ## Or X, whatever.
+twitter_url="" ## (Or X, whatever.)
 tiktok_url=""
 reddit_url=""
 facebook_url=""  ## You a boomer if you set this.
