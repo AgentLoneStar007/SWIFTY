@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Soundboard Item Template",
+    "description": "This is a template item. Copy it and modify to your liking.",
+    "sound_url": "https://yoursite.com/fart.mp3",
+    "image_url": "https://yoursite.com/fart.png",
+    "cost": 19,
+    "quantity": -1,
+    "disabled": true
+  }
+]

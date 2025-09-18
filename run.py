@@ -10,6 +10,26 @@ import tomllib
 import sys
 import traceback
 
+# TODO(s)
+#  - Make a simple method of creating new soundboard items,
+#    so simple that even streamers can figure it out.
+#  - Figure out dashboard layout
+#  - Figure out OAuth with Twitch and YouTube
+#    Two methods of doing this are to do it the
+#    right way (by setting up auth with both
+#    platforms), or figure out a system of either
+#    session linking via running a command in chat,
+#    or by creating an account stored on this webserver
+#    and then linking said account to your Twitch and YT
+#    accounts via the previously mentioned command. But
+#    creating local accounts would probably be an issue
+#    because people think it's funny to create 1e2.34
+#    accounts within 43ms.
+#  - Figure out the store. I really don't like the idea
+#    of handling credit card info in this app...
+#  - Translations?
+#  And I think that's it!
+
 
 # Main program loop
 def main() -> None:
